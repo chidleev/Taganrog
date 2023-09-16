@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div id="hello_text" class="main_container">
+        <h1>Это сайт-виртуальный музей города Таганрог</h1>
+        <h2>здесь вы можете узнать много нового об улицах и архитектурных достопримечательностях города</h2>
+    </div>
+
+    <div id="about_info" class="main_container">
+        <h3 id="about_project" class="card">
+            <p>О проекте:</p>
+            <p>Проект был разработан в рамках учебного задания по созданию “виртуального музея города Таганрог.” Мы с
+                командой выбрали несколько улиц в культурном центре города, чтобы рассказать о них.</p>
+            <ol>
+                <h4>На обозрения будут представлены следующие улицы:</h4>
+                <li>Улица Чехова</li>
+                <li>Петровская улица</li>
+                <li>Октябрьская улица</li>
+                <li>Александровская улица</li>
+            </ol>
+            <p>Так же на каждой улицы отмечены примечательные объекты (памятники) о которых вы можете узнать подробнее,
+                нажав на них. Отдельно мы написали про сквер Петра I.
+                Подробнее - ниже</p>
+        </h3>
+
+        <h3 id="about_content" class="card">
+            <ol>
+                <h4>На сайте присутствует следующий перечень объектов:</h4>
+                <li><a href="/">Памятник Петру</a></li>
+                <li>Отстаки Троицкой Крепости</li>
+                <li>и так далее по списку</li>
+            </ol>
+            <p>Нажми на объект, чтобы сразу перейти к его описанию.</p>
+        </h3>
+    </div>
+
+    <div id="map" class="main_container">
+            <div id="_1" class="road">ул. Дзержинского</div>
+            <div id="_2" class="road">ул. Петровская</div>
+            <div id="_3" class="road">ул. Греческая</div>
+            <div id="_4" class="road"></div>
+            <div id="_5" class="road">пер. 1-Крепостной</div>
+            <div id="_6" class="road">ул. Октябрьская</div>
+            <div id="_7" class="road">пер. Смирновский</div>
+            <div id="_8" class="road">ул. Фрунзе</div>
+            <div id="_9" class="road">ул. Александровская</div>
+            <div id="_10" class="road">пер. Гоголевский</div>
+            <div id="_11" class="road">пер. Антона Глушко</div>
+            <div id="_12" class="road">ул. Чехова</div>
+
+            <div id="alferaci" class="sight_img"></div>
+            <div id="petr_war_house" class="sight_img"></div>
+            <div id="chehov_school" class="sight_img"></div>
+            <div id="chehov_shop" class="sight_img"></div>
+            <div id="chehov_theatre" class="sight_img"></div>
+            <div id="petr_1" class="sight_img"></div>
+            <div id="rail_station" class="sight_img"></div>
+            <div id="stonestairs" class="sight_img"></div>
+    </div>
+
+    <div id="popup"></div>
+    <div id="bg_img"></div>
+</body>
+<script src="/js/bgScript.js"></script>
+<script src="/js/descScript.js" type="module"></script>
+</html>

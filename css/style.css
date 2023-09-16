@@ -1,0 +1,357 @@
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/montserrat-v25-cyrillic-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: Montserrat;
+    color: white;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#bg_img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    background: url(/img/background.jpg) no-repeat;
+    background-size: cover;
+
+    filter: blur();
+}
+
+.main_container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+}
+
+
+#hello_text {
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px;
+}
+
+#hello_text h1, #hello_text h2 {
+    max-width: 500px;
+}
+
+
+#about_info {
+    padding: 100px;
+    min-height: 150vh;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+#about_info .card {
+    padding: 50px;
+
+    height: fit-content;
+    min-height: 50vh;
+
+    flex: 1 1 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+
+    background-color: goldenrod;
+    border-radius: 50px;
+}
+
+#about_project {
+    align-self: flex-start;
+}
+
+#about_content {
+    align-self: flex-end;
+}
+
+
+#map {
+    display: grid;
+    grid-template-columns: repeat(50, 2vw);
+    grid-template-rows: repeat(50, 2vw);
+}
+
+#map .road {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.5vw;
+    text-wrap: nowrap;
+
+    background-color: rgb(80, 80, 80);
+}
+
+#_1.road{
+    grid-column-start: 20;
+    grid-column-end: 35;
+    grid-row-start: 5;
+    grid-row-end: 5;
+}
+
+#_2.road{
+    grid-column-start: 35;
+    grid-column-end: 35;
+    grid-row-start: 5;
+    grid-row-end: 35;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+#_3.road{
+    grid-column-start: 40;
+    grid-column-end: 40;
+    grid-row-start: 15;
+    grid-row-end: 45;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+#_4.road{
+    grid-column-start: 35;
+    grid-column-end: 40;
+    grid-row-start: 15;
+    grid-row-end: 15;
+}
+
+#_5.road{
+    grid-column-start: 35;
+    grid-column-end: 41;
+    grid-row-start: 35;
+    grid-row-end: 35;
+}
+
+#_6.road{
+    grid-column-start: 20;
+    grid-column-end: 20;
+    grid-row-start: 5;
+    grid-row-end: 25;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+#_7.road{
+    grid-column-start: 10;
+    grid-column-end: 25;
+    grid-row-start: 10;
+    grid-row-end: 10;
+}
+
+#_8.road{
+    grid-column-start: 25;
+    grid-column-end: 25;
+    grid-row-start: 10;
+    grid-row-end: 45;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+#_9.road{
+    padding-top: 20px;
+    grid-column-start: 10;
+    grid-column-end: 10;
+    grid-row-start: 10;
+    grid-row-end: 40;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+}
+
+#_10.road {
+    grid-column-start: 5;
+    grid-column-end: 20;
+    grid-row-start: 20;
+    grid-row-end: 20;
+}
+
+#_11.road {
+    grid-column-start: 5;
+    grid-column-end: 30;
+    grid-row-start: 30;
+    grid-row-end: 30;
+}
+
+#_12.road {
+    grid-column-start: 5;
+    grid-column-end: 5;
+    grid-row-start: 30;
+    grid-row-end: 50;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+#map .sight_img {
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+}
+#map .sight_img::before {
+    position: relative;
+    top: -10%;
+    font-size: 1.5vw;
+    text-wrap: nowrap;
+}
+
+#alferaci.sight_img {
+    grid-column-start: 18;
+    grid-column-end: 25;
+    grid-row-start: 32;
+    grid-row-end: 39;
+    
+    background-image: url(/img/alferaci.png);
+    background-size: cover;
+    background-position: center;
+}
+#alferaci.sight_img::before {
+    content: "Дворец Алфераки";
+}
+
+#chehov_school.sight_img {
+    grid-column-start: 13;
+    grid-column-end: 20;
+    grid-row-start: 22;
+    grid-row-end: 29;
+
+    background-image: url(/img/chehov_school.png);
+    background-size: cover;
+    background-position: center;
+}
+#chehov_school.sight_img::before {
+    content: "Гимназия Чехова";
+}
+
+#chehov_shop.sight_img {
+    grid-column-start: 8;
+    grid-column-end: 15;
+    grid-row-start: 13;
+    grid-row-end: 20;
+
+    background-image: url(/img/chehov_shop.png);
+    background-size: cover;
+    background-position: center;
+}
+#chehov_shop.sight_img::before {
+    content: "Лавка Чехова";
+}
+
+#chehov_theatre.sight_img {
+    grid-column-start: 28;
+    grid-column-end: 35;
+    grid-row-start: 18;
+    grid-row-end: 25;
+
+    background-image: url(/img/chehov_theatre.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+#chehov_theatre.sight_img::before {
+    content: "Театр Чехова";
+}
+
+#petr_1.sight_img {
+    display: none;
+    grid-column-start: 17;
+    grid-column-end: 24;
+    grid-row-start: 1;
+    grid-row-end: 8;
+
+    background-image: url(/img/petr_1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#petr_1.sight_img::before {
+    content: "Памятник Петру I";
+}
+
+#petr_war_house.sight_img {
+    grid-column-start: 6;
+    grid-column-end: 13;
+    grid-row-start: 43;
+    grid-row-end: 50;
+
+    background-image: url(/img/petr_war_house.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#petr_war_house.sight_img::before {
+    content: "Петровские казармы";
+}
+
+#rail_station.sight_img {
+    grid-column-start: 17;
+    grid-column-end: 24;
+    grid-row-start: 1;
+    grid-row-end: 8;
+
+    background-image: url(/img/rail_station.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#rail_station.sight_img::before {
+    content: "Старый вокзал";
+}
+
+#stonestairs.sight_img {
+    grid-column-start: 41;
+    grid-column-end: 48;
+    grid-row-start: 18;
+    grid-row-end: 25;
+
+    background-image: url(/img/stonestairs.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#stonestairs.sight_img::before {
+    content: "Каменная лестница";
+}
+
+#popup {
+    padding: 25px;
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+
+    position: fixed;
+    left: 55vw;
+    top: 5vh;
+
+    width: 40vw;
+    height: fit-content;
+    max-height: 90vh;
+    
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    border-radius: 50px;
+    background-color: goldenrod;
+    box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.3);
+}
+
+#popup.active {
+    display: flex;
+}
