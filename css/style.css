@@ -34,9 +34,11 @@ body {
     height: 100%;
 
     background: url(/img/background.jpg) no-repeat;
-    background-size: cover;
+    background-size: 105%;
+    background-position: 50% 50%;
 
     filter: blur();
+    transition: background-position ease-out 2s;
 }
 
 .main_container {
@@ -332,7 +334,7 @@ body {
 #popup {
     padding: 25px;
 
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
 
@@ -350,8 +352,12 @@ body {
     border-radius: 50px;
     background-color: goldenrod;
     box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.3);
+
+    transform: translateY(-90vh);
+    transition: transform 0.5s;
 }
 
 #popup.active {
-    display: flex;
+    transform: translateY(0);
+    transition: transform 0.5s;
 }
